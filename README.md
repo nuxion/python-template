@@ -5,16 +5,30 @@
 
 -----
 
-**Table of Contents**
+## Description
 
-- [Installation](#installation)
-- [License](#license)
+This is a template used to start python projects. 
 
-## Installation
+It can be used as if clonning the git repository, or using degit:
 
 ```console
-pip install changeme
+degit https://github.com/nuxion/python-template <your-project-name>
 ```
+
+After that run `rename.sh` script to refactor folders and names to the new one:
+
+```console
+./rename.sh <your-project-name>
+```
+
+## Features
+
+- Makefile for common tasks
+- Sphinx 
+- pytest
+- `.gitignore` for python + nodejs projects + emacs + vim + vscode (using topal gitignore generation tool)
+- jupyter as optional dependency + jupytext
+- linting tools
 
 ## License
 
