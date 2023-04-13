@@ -30,6 +30,10 @@ After that run `rename.sh` script to refactor folders and names to the new one:
 - jupyter as optional dependency + jupytext
 - linting tools
 
+## References
+
+- https://waylonwalker.com/hatch-version/
+
 ## License
 
 `changeme` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
