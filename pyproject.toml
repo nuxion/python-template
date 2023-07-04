@@ -57,6 +57,7 @@ dependencies = [
   "sphinx-rtd-theme",
   "httpx",
   "ipython",
+  "pip-tools",
 ]
 
 
