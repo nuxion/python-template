@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "changeme"
 description = ''
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.10"
 license = "MIT"
 keywords = []
 authors = [
@@ -15,9 +15,6 @@ authors = [
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python",
-  "Programming Language :: Python :: 3.7",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: Implementation :: CPython",
@@ -28,8 +25,8 @@ dynamic = ["version"]
 
 [project.optional-dependencies]
 jupyter = [
-   "jupyterlab~=3.6.2",
-   "jupytext~=1.14.5",
+   "jupyterlab~=4.2.5",
+   "jupytext~=1.16.4",
 ]
 
 
@@ -47,10 +44,10 @@ dependencies = [
   "pytest",
   "pytest-asyncio",
   "pytest-cov",
-  "pylint~=2.16.2",
-  "isort~=5.12.0",
-  "black~=23.1.0",
-  "black-macchiato",  # for partial update of buffers in emacs
+  # "pylint~=2.16.2",
+  # "isort~=5.12.0",
+  # "black~=23.1.0",
+  # "black-macchiato",  # for partial update of buffers in emacs
   "mypy~=1.0.1",
   "Sphinx~=5.3.0",
   "sphinx-autobuild",
@@ -58,6 +55,7 @@ dependencies = [
   "httpx",
   "ipython",
   "pip-tools",
+  "ruff"
 ]
 
 
@@ -69,7 +67,7 @@ cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=change
 no-cov = "cov --no-cov {args}"
 
 [[tool.hatch.envs.test.matrix]]
-python = ["37", "38", "39", "310", "311"]
+python = ["310", "311"]
 
 [tool.coverage.run]
 branch = true
@@ -85,12 +83,12 @@ exclude_lines = [
   "if TYPE_CHECKING:",
 ]
 
-[tool.isort]
-profile = "black"
-
-
-[tool.black]
-line-length = 88
-
+# [tool.isort]
+# profile = "black"
+# 
+# 
+# [tool.black]
+# line-length = 88
+ 
 [tool.jupytext]
 formats = "ipynb,py"
